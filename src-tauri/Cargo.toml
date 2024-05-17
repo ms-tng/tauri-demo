@@ -1,8 +1,8 @@
 [package]
-name = "jscc24-tauri"
-version = "0.0.0"
-description = "A Tauri App"
-authors = ["you"]
+name = "freeport"
+version = "0.1.0"
+description = "Freeport (Tauri demo app)"
+authors = ["Matthias Stemmler <matthias.stemmler@tngtech.com>"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -11,9 +11,12 @@ edition = "2021"
 tauri-build = { version = "1", features = [] }
 
 [dependencies]
-tauri = { version = "1", features = ["shell-open"] }
+listeners = "0.2.0"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+sysinfo = "0.30.12"
+tauri = { version = "1", features = ["shell-open"] }
+tokio = { version = "1.37.0", features = ["macros", "time"] }
 
 [features]
 # This feature is used for production builds or when a dev server is not specified, DO NOT REMOVE!!
